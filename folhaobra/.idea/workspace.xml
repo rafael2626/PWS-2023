@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="1f87f8f5-78c7-4e3b-80aa-4ba79c52d641" name="Changes" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="C:\wamp64\bin\php\php8.0.26\php.exe">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php80" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/php-activerecord/php-activerecord" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="2MpGuJnKG6c6NZSyKONT1S1Dz1I" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/wamp64/www/creditapp",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\folhaobra\views\servico" />
+      <recent name="C:\wamp64\www\folhaobra\views\empresa" />
+      <recent name="C:\wamp64\www\folhaobra\public" />
+      <recent name="C:\wamp64\www\creditapp\public" />
+      <recent name="C:\wamp64\www\creditapp\Vistas\auth" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\folhaobra\views\layout" />
+      <recent name="C:\wamp64\www\folhaobra\views\layout\default" />
+      <recent name="C:\wamp64\www\fichas\pagamentos" />
+      <recent name="C:\wamp64\www\fichas\pagamentos\controladores" />
+      <recent name="C:\wamp64\www\fichas\pagamentos\vistas" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="1f87f8f5-78c7-4e3b-80aa-4ba79c52d641" name="Changes" comment="" />
+      <created>1678457331206</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678457331206</updated>
+      <workItem from="1678457332458" duration="6713000" />
+      <workItem from="1678464490718" duration="1564000" />
+      <workItem from="1678973577635" duration="303000" />
+      <workItem from="1678973945019" duration="5975000" />
+      <workItem from="1679043654957" duration="739000" />
+      <workItem from="1679047419580" duration="248000" />
+      <workItem from="1679057647421" duration="1451000" />
+      <workItem from="1679059120150" duration="637000" />
+      <workItem from="1679060550361" duration="6888000" />
+      <workItem from="1679068928265" duration="1098000" />
+      <workItem from="1679300669452" duration="55000" />
+      <workItem from="1679561242563" duration="604000" />
+      <workItem from="1679571095283" duration="152000" />
+      <workItem from="1679580633176" duration="6436000" />
+      <workItem from="1679651616243" duration="605000" />
+      <workItem from="1681391545216" duration="3535000" />
+      <workItem from="1681395302798" duration="2822000" />
+      <workItem from="1681465047505" duration="636000" />
+      <workItem from="1681477652249" duration="6544000" />
+      <workItem from="1681559973649" duration="542000" />
+      <workItem from="1682082565824" duration="6605000" />
+      <workItem from="1682092531418" duration="631000" />
+      <workItem from="1682600355984" duration="6441000" />
+      <workItem from="1682686878002" duration="6429000" />
+      <workItem from="1682775541355" duration="761000" />
+      <workItem from="1683208024750" duration="3671000" />
+      <workItem from="1683277769577" duration="1119000" />
+      <workItem from="1683279930533" duration="294000" />
+      <workItem from="1683291651131" duration="6403000" />
+      <workItem from="1683377811567" duration="1337000" />
+      <workItem from="1683391239984" duration="582000" />
+      <workItem from="1683392510736" duration="1473000" />
+      <workItem from="1683395792228" duration="4000" />
+      <workItem from="1683797420315" duration="1540000" />
+      <workItem from="1683811797099" duration="3301000" />
+      <workItem from="1683897906841" duration="5191000" />
+      <workItem from="1684142418045" duration="919000" />
+      <workItem from="1684234469997" duration="653000" />
+      <workItem from="1684257404035" duration="2236000" />
+      <workItem from="1684260173825" duration="299000" />
+      <workItem from="1684260537299" duration="613000" />
+      <workItem from="1684261346060" duration="650000" />
+      <workItem from="1684415347270" duration="1518000" />
+      <workItem from="1684416888797" duration="461000" />
+      <workItem from="1684417409413" duration="4059000" />
+      <workItem from="1684501246139" duration="6792000" />
+      <workItem from="1684690819719" duration="2333000" />
+      <workItem from="1684837812966" duration="287000" />
+      <workItem from="1684842378062" duration="1951000" />
+      <workItem from="1684847015794" duration="2991000" />
+      <workItem from="1684860644059" duration="1046000" />
+      <workItem from="1684863061541" duration="1614000" />
+      <workItem from="1684919830440" duration="725000" />
+      <workItem from="1685019488499" duration="305000" />
+      <workItem from="1685020383998" duration="1134000" />
+      <workItem from="1685023296325" duration="4071000" />
+      <workItem from="1685092290630" duration="2895000" />
+      <workItem from="1685103742094" duration="7309000" />
+      <workItem from="1685214790743" duration="3560000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
