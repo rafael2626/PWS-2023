@@ -8,9 +8,4 @@ class BOController extends Controller
 
     }
 
-    public function login()
-    {
-
-        $this->renderView('bo', 'login',[],'login');
-    }
 }

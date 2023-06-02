@@ -67,11 +67,11 @@
       <recent name="C:\wamp64\www\creditapp\Vistas\auth" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\folhaobra\views\login" />
+      <recent name="C:\wamp64\www\folhaobra\views\index" />
       <recent name="C:\wamp64\www\folhaobra\views\layout" />
       <recent name="C:\wamp64\www\folhaobra\views\layout\default" />
       <recent name="C:\wamp64\www\fichas\pagamentos" />
-      <recent name="C:\wamp64\www\fichas\pagamentos\controladores" />
-      <recent name="C:\wamp64\www\fichas\pagamentos\vistas" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -140,7 +140,14 @@
       <workItem from="1685023296325" duration="4071000" />
       <workItem from="1685092290630" duration="2895000" />
       <workItem from="1685103742094" duration="7309000" />
-      <workItem from="1685214790743" duration="3560000" />
+      <workItem from="1685214790743" duration="3847000" />
+      <workItem from="1685289369948" duration="9873000" />
+      <workItem from="1685447082183" duration="599000" />
+      <workItem from="1685523249336" duration="4475000" />
+      <workItem from="1685547276128" duration="596000" />
+      <workItem from="1685624379723" duration="7280000" />
+      <workItem from="1685634187231" duration="217000" />
+      <workItem from="1685692183058" duration="3647000" />
     </task>
     <servers />
   </component>

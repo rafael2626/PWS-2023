@@ -11,15 +11,11 @@ return [
     'defaultRoute' => ['GET', 'BOController', 'index'],
     'bo' => [
         'index' => ['GET', 'BOController', 'index'],
-        'login' => ['GET', 'BOController', 'login'],
     ],
     'login' => [
         'index' => ['GET', 'LoginController', 'index'],
+        'checklogin' => ['POST' , 'LoginController','checklogin']
         ],
-    'home' => [
-        'index' => ['GET', 'HomeController', 'index'],
-        'show' => ['POST', 'PlanoController', 'show'],
-    ],
     'empresa' => [
         'index' => ['GET', 'EmpresaController', 'index'],
         'show' => ['GET', 'EmpresaController', 'show'],

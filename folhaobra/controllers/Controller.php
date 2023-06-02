@@ -15,7 +15,7 @@ class Controller
     protected function redirectToRoute($controllerPrefix, $action, $params = [])
     {
         // Build the redirect URL
-        $url = 'registo.php?c=' . urlencode($controllerPrefix) . '&a=' .
+        $url = 'index.php?c=' . urlencode($controllerPrefix) . '&a=' .
             urlencode($action);
         foreach ($params as $key => $value) {
             $url .= '&' . urlencode($key) . '=' . urlencode($value);

@@ -8,42 +8,47 @@
             <h3>Registar Nova Empresa</h3>
             <br>
             <form action="index.php?c=empresa&a=store" method="post">
-                <label for="iva">Descricao</label>
-                <input type="text" name="descricao" value="<?php if(isset($empresa)) { echo   $empresa->descricao ; }?>">
+                <label for="designacao">Designacao</label>
+                <input type="text" name="designacao" value="<?php if(isset($empresa)) { echo   $empresa->designacao; }?>">
                 <br>
-                <?php if(isset($empresa->errors)){ echo $empresa->errors->on('descricao'); }?>
+                <?php if(isset($empresa->errors)){ echo $empresa->errors->on('designacao'); }?>
                 <br>
-                <label for="descricao">Email</label>
+                <label for="email">Email</label>
                 <input type="text" name="email" value="<?php if(isset($empresa)) { echo $empresa->email; }?>">
                 <br>
                 <?php if(isset($empresa->errors)){ echo $empresa->errors->on('email'); }?>
                 <br>
                 <label for="telefone">Telefone</label>
-                <input type="text" name="telefone" value="<?php if(isset($telefone)) { echo $empresa->telefone; }?>">
+                <input type="number" name="telefone" value="<?php if(isset($empresa)) { echo $empresa->telefone; }?>">
                 <br>
                 <?php if(isset($empresa->errors)){ echo $empresa->errors->on('telefone'); }?>
                 <br>
                 <label for="nif">Nif</label>
-                <input type="text" name="nif" value="<?php if(isset($empresa)) { echo $empresa->nif; }?>">
+                <input type="number" name="nif" value="<?php if(isset($empresa)) { echo $empresa->nif; }?>">
                 <br>
-                <?php if(isset($empresa->errors)){ echo $empresa->errors->on('hora'); }?>
+                <?php if(isset($empresa->errors)){ echo $empresa->errors->on('nif'); }?>
                 <br>
-                <label for="hora">Morada</label>
+                <label for="morada">Morada</label>
                 <input type="text" name="morada" value="<?php if(isset($empresa)) { echo $empresa->morada; }?>">
                 <br>
                 <?php if(isset($empresa->errors)){ echo $empresa->errors->on('morada'); }?>
                 <br>
+                <label for="codigopostal">Codigo Postal</label>
+                <input type="number" name="codigopostal" value="<?php if(isset($empresa)) { echo $empresa->codigopostal; }?>">
+                <br>
+                <?php if(isset($empresa->errors)){ echo $empresa->errors->on('codigopostal'); }?>
+                <br>
                 <label for="localidade">Localidade</label>
                 <input type="text" name="localidade" value="<?php if(isset($empresa)) { echo $empresa->localidade; }?>">
                 <br>
-                <?php if(isset($empresa->errors)){ echo $empresa->errors->on('hora'); }?>
+                <?php if(isset($empresa->errors)){ echo $empresa->errors->on('localidade'); }?>
                 <br>
-                <label for="capitalsocial">Capital Social</label>
-                <input type="text" name="capitalsocial" value="<?php if(isset($empresa)) { echo $empresa->capitalsocial; }?>">
+                <label for="capital">Capital</label>
+                <input type="text" name="capital" value="<?php if(isset($empresa)) { echo $empresa->capital; }?>">
                 <br>
-                <?php if(isset($empresa->errors)){ echo $empresa->errors->on('capitalsocial'); }?>
+                <?php if(isset($empresa->errors)){ echo $empresa->errors->on('capital'); }?>
                 <br>
-                <button  <input type=submit" class="btn btn-success">Registar Empresa</button>
+                <input type="submit" class="btn btn-success" value="Registar Empresa">
             </form>
             <br>
             <a href="./index.php?c=empresa&a=index">

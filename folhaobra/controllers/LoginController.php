@@ -1,16 +1,28 @@
 <?php
-
+require_once  'controllers\Controller.php';
 class LoginController extends  Controller
 {
     public function index()
     {
-        $this->renderView('bo', 'login',[],'login');
+        $this->renderView('login', 'index',[],'login');
 
     }
-  /*  public  function checklogin()
+    public  function checklogin()
     {
-        //verificar roles
+        $username = $this->getHTTPPostParam('username');
+        $password = $this->getHTTPPostParam('password');
         $auth = new Auth();
-        if($this->Chec())
-    }*/
+        if($auth->CheckAuth($username,$password))
+        {
+            echo  'login válido <br>';
+
+            echo  $auth->getUserId() . '<br>';
+            echo  $auth->getUsername() . '<br>';
+            echo  $auth->getUserRole() . '<br>';
+        }else
+        {
+            echo 'login invalido';
+        }
+
+    }
 }

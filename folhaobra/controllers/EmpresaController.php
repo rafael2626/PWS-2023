@@ -19,8 +19,7 @@ class EmpresaController extends Controller
     }
     public function create()
     {
-        $empresas = Empresa::all();
-        $this->renderView('empresa', 'create', ['empresas' => $empresas]);
+        $this->renderView('empresa', 'create');
     }
     public function store()
     {
@@ -29,7 +28,6 @@ class EmpresaController extends Controller
             $empresa->save();
             $this->redirectToRoute('empresa', 'index');
         } else {
-            $empresa = Empresa::all();
             $this->renderView('empresa', 'create',['empresa' => $empresa]);
         }
     }
@@ -39,7 +37,7 @@ class EmpresaController extends Controller
         if (is_null($empresa)) {
             $this->redirectToRoute('empresa', 'index');
         } else {
-            $this->renderView('empresa', 'edit', ['book' => $empresa,'id' => $id]);
+            $this->renderView('empresa', 'edit', ['empresa' => $empresa,'id' => $id]);
         }
     }
     public function update($id)

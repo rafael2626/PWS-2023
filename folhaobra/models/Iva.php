@@ -1,6 +1,6 @@
 <?php
 
-class Iva
+class Iva extends \ActiveRecord\Model
 {
 
 }

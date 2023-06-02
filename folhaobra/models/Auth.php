@@ -10,8 +10,6 @@ class Auth
     }
     public function CheckAuth($username, $password)
     {
-        session_start();
-
         $user = User::find_by_username_and_password($username,$password);
         if(is_null($user))
         {
@@ -20,10 +18,9 @@ class Auth
         {
             $_SESSION['auth']  ['username'] = $user->username;;
             //igual para todos
-            $_SESSION ['id'] = $user->id;
-            $_SESSION ['username'] = $user->username;
-            $_SESSION ['password'] = $user->password;
-            $_SESSION ['user_role'] = $user->role;
+            $_SESSION ['auth']  ['id'] = $user->id;
+            $_SESSION ['auth']  ['password'] = $user->password;
+            $_SESSION   ['auth'] ['user_role'] = $user->role;
 
             return true;
         }

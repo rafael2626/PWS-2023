@@ -29,20 +29,6 @@
                 <?php if(isset($iva->errors)){ echo $iva->errors->on('hora'); }?>
                 <br>
 
-
-
-
-
-
-
-                <label for="genre_id">Genre:</label>
-                <select name="genre_id">
-                    <?php foreach($genres as $genre){?>
-                        <option value="<?= $genre->id?>"> <?= $genre->name; ?></option>
-                    <?php } ?>
-                    <br>
-                    <br>
-                </select>
                 <br>
                 <button  <input type=submit" class="btn btn-success">Registar IVA </button>
             </form>
