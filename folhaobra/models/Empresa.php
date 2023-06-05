@@ -17,7 +17,12 @@ class Empresa extends Model
         array('designacao', 'maximum' => 20),
         array('telefone', 'maximum' => 9),
         array('nif', 'maximum' => 9),
+    
 
     );
-
+    static $validates_numericality_of = array(
+        array('telefone', 'only_integer' => true),
+        array('nif', 'only_integer' => true),
+        array('capital', 'only_integer' => true),
+    );
 }

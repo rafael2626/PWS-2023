@@ -32,10 +32,10 @@
                     <br>
                 </select>
                 <br>
-                <button  <input type=submit" class="btn btn-success">Registar IVA </button>
+                <button  <input type=submit" class="btn btn-success">Registar Servico </button>
             </form>
             <br>
-            <a href="./index.php?c=iva&a=index">
+            <a href="./index.php?c=servico&a=index">
                 <button  class="btn btn-danger">Cancelar</button>
             </a>
         </div>

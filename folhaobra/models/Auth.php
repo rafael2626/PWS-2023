@@ -20,7 +20,7 @@ class Auth
             //igual para todos
             $_SESSION ['auth']  ['id'] = $user->id;
             $_SESSION ['auth']  ['password'] = $user->password;
-            $_SESSION   ['auth'] ['user_role'] = $user->role;
+            $_SESSION   ['auth'] ['role'] = $user->role;
 
             return true;
         }
@@ -51,9 +51,9 @@ class Auth
     }
     public  function  getUserId()
     {
-        if (isset($_SESSION['id']))
+        if($this->isLoggedIn())
         {
-            return $_SESSION['id'];
+            return  $_SESSION['auth']  ['id'];
         }else
         {
             return '';
@@ -61,9 +61,9 @@ class Auth
     }
     public  function  getUserRole()
     {
-        if (isset($_SESSION['role']))
+        if($this->isLoggedIn())
         {
-            return $_SESSION['role'];
+            return  $_SESSION['auth']  ['role'];
         }else
         {
             return '';
@@ -73,8 +73,8 @@ class Auth
     {
         if($this->isLoggedIn())
         {
-           $roles = $this->getUserRole();
-           return in_array($roles , $roles);
+           $role = $this->getUserRole();
+           return in_array($role , $roles);
         }
     }
 }

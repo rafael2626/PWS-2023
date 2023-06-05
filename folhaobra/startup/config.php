@@ -2,7 +2,7 @@
 require './vendor/autoload.php';
 
 define('APP_NAME', 'Folha Obra');
-define('INVALID_ACCESS_ROUTE', 'registo.php?c=auth&a=index');
+define('INVALID_ACCESS_ROUTE', 'index.php?c=auth&a=index');
 
 ActiveRecord\Config::initialize(function($cfg)
 {

@@ -5,6 +5,9 @@ require_once 'controllers/LoginController.php';
 require_once 'controllers/EmpresaController.php';
 require_once 'controllers/ServicoController.php';
 require_once 'controllers/IvaController.php';
+require_once 'controllers/UserController.php';
+require_once 'controllers/LinhaObraController.php';
+require_once 'controllers/FolhaobraController.php';
 
 
 return [
@@ -12,6 +15,7 @@ return [
     'bo' => [
         'index' => ['GET', 'BOController', 'index'],
     ],
+
     'login' => [
         'index' => ['GET', 'LoginController', 'index'],
         'checklogin' => ['POST' , 'LoginController','checklogin']
@@ -24,6 +28,33 @@ return [
         'edit' => ['GET', 'EmpresaController', 'edit'],
         'update' => ['POST', 'EmpresaController', 'update'],
         'delete' => ['GET', 'EmpresaController', 'delete'],
+    ],
+    'linhaobra' => [
+        'index' => ['GET', 'LinhaobraController', 'index'],
+        'show' => ['GET', 'LinhaobraController', 'show'],
+        'create' => ['GET', 'LinhaobraController', 'create'],
+        'store' => ['POST', 'LinhaobraController', 'store'],
+        'edit' => ['GET', 'LinhaobraController', 'edit'],
+        'update' => ['POST', 'LinhaobraController', 'update'],
+        'delete' => ['GET', 'LinhaobraController', 'delete'],
+    ],
+    'folhaobra' => [
+        'index' => ['GET', 'FolhaobraController', 'index'],
+        'show' => ['GET', 'FolhaobraController', 'show'],
+        'create' => ['GET', 'FolhaobraController', 'create'],
+        'store' => ['POST', 'FolhaobraController', 'store'],
+        'edit' => ['GET', 'FolhaobraController', 'edit'],
+        'update' => ['POST', 'FolhaobraController', 'update'],
+        'delete' => ['GET', 'FolhaobraController', 'delete'],
+    ],
+    'user' => [
+        'index' => ['GET', 'UserController', 'index'],
+        'show' => ['GET', 'UserController', 'show'],
+        'create' => ['GET', 'UserController', 'create'],
+        'store' => ['POST', 'UserController', 'store'],
+        'edit' => ['GET', 'UserController', 'edit'],
+        'update' => ['POST', 'UserController', 'update'],
+        'delete' => ['GET', 'UserController', 'delete'],
 
     ],
     'servico' => [

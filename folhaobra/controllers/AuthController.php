@@ -35,10 +35,7 @@ class  AuthController extends Controller
     {
         $auth = new Auth();
         $auth->Logout();
-        $this->redirectToRoute('auth','index');
+        $this->redirectToRoute('login','index');
     }
-    public  function  checklogin()
-    {
-      //por echos
-    }
+
 }

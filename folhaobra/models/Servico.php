@@ -3,7 +3,10 @@ use ActiveRecord\Model;
 class Servico extends  Model
 {
     static $belongs_to = array(
-        array('iva')
+        array('linhaobras')
+    );
+    static $has_many = array(
+        array('ivas')
     );
     static $validates_presence_of = array(
         array('descricao', 'message' => 'A descricao tem que ser preenchida'),

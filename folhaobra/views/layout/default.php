@@ -25,7 +25,13 @@
             </li>
         </ul>
 
+        <?php if($auth->IsLoggedIn()){?>
+          <a href="index.php?c=login&a=index">Logout(<?=$auth->getUsername()?>)</a>
+            <?php
+        }else{?>
+            <li><a href="index.php?c=login&a=index">Login</a></li>
 
+        <?php } ?>
         <!-- Right navbar links -->
         <ul class="navbar-nav ml-auto">
             <!-- Navbar Search -->
@@ -190,7 +196,23 @@
                                 Gestão de Dados
                                 <i class="fas fa-angle-left right"></i>
                             </p>
+                        </li>
                         </a>
+                        <a href="index.php?c=empresa&a=index" class="nav-link">
+                            <i class="nav-icon fas fa-copy"></i>
+                            <p>
+                                Gestão de empresas
+                                <i class="fas fa-angle-left right"></i>
+                            </p>
+                        </a>
+                    <a href="index.php?c=empresa&a=index" class="nav-link">
+                        <i class="nav-icon fas fa-copy"></i>
+                        <p>
+                            Registar Funcionários
+                            <i class="fas fa-angle-left right"></i>
+                        </p>
+                    </a>
+                </ul>
 
             </nav>
             <!-- /.sidebar-menu -->

@@ -22,8 +22,8 @@ class ServicoController extends Controller
 
     public function create()
     {
-        $ivas = Iva::all();
-        $this->renderView('servico', 'create', ['ivas' => $ivas]);
+
+        $this->renderView('servico', 'create');
     }
 
     public function store()
@@ -39,16 +39,32 @@ class ServicoController extends Controller
 
     public function edit($id)
     {
-
+        $ivas = Iva::all();
+        $servico = Servico::find($id);
+        if (is_null($servico)) {
+            $this->redirectToRoute('servico', 'index');
+        } else {
+            $this->renderView('servico', 'edit', ['servico' => $servico,'id' => $id, 'ivas' => $ivas]);
+        }
     }
 
     public function update($id)
     {
-
+        $ivas = Iva::all();
+        $servico = Servico::find($id);
+        $servico->update_attributes($this->getHTTPPost());
+        if($servico->is_valid()){
+            $servico->save();
+            $this->redirectToRoute('servico', 'index');
+        } else {
+            $this->renderView('servico', 'edit', ['servico' => $servico, 'ivas' => $ivas]);
+        }
     }
 
     public function delete($id)
     {
-
+        $servico = Servico::find($id);
+        $servico->delete();
+        $this->redirectToRoute('servico', 'index');
     }
 }

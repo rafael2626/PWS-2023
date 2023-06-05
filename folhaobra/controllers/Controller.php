@@ -61,4 +61,12 @@ class Controller
             header( 'Location: ' .  constant('INVALID_ACCESS_ROUTE'));
         }
     }
+    protected function authenticationFilterAllows($roles=[])
+    {
+        $auth = new Auth();
+        if(!$auth->isLoggedInAs($roles))
+        {
+            header( 'Location: ' .  constant('INVALID_ACCESS_ROUTE'));
+        }
+    }
 }
