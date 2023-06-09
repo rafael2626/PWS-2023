@@ -8,14 +8,16 @@ require_once 'controllers/IvaController.php';
 require_once 'controllers/UserController.php';
 require_once 'controllers/LinhaObraController.php';
 require_once 'controllers/FolhaobraController.php';
-
+require_once 'controllers/FOController.php';
 
 return [
     'defaultRoute' => ['GET', 'BOController', 'index'],
     'bo' => [
         'index' => ['GET', 'BOController', 'index'],
     ],
-
+    'fo' => [
+        'index' => ['GET', 'FOController', 'index'],
+    ],
     'login' => [
         'index' => ['GET', 'LoginController', 'index'],
         'checklogin' => ['POST' , 'LoginController','checklogin']
@@ -46,6 +48,8 @@ return [
         'edit' => ['GET', 'FolhaobraController', 'edit'],
         'update' => ['POST', 'FolhaobraController', 'update'],
         'delete' => ['GET', 'FolhaobraController', 'delete'],
+        'select' => ['GET', 'FolhaobraController', 'select'],
+
     ],
     'user' => [
         'index' => ['GET', 'UserController', 'index'],

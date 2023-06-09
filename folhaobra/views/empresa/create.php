@@ -19,7 +19,7 @@
                 <?php if(isset($empresa->errors)){ echo $empresa->errors->on('email'); }?>
                 <br>
                 <label for="telefone">Telefone</label>
-                <input type="number" name="telefone" value="<?php if(isset($empresa)) { echo $empresa->telefone; }?>">
+                <input type="text" name="telefone" value="<?php if(isset($empresa)) { echo $empresa->telefone; }?>">
                 <br>
                 <?php if(isset($empresa->errors)){ echo $empresa->errors->on('telefone'); }?>
                 <br>
@@ -44,7 +44,7 @@
                 <?php if(isset($empresa->errors)){ echo $empresa->errors->on('localidade'); }?>
                 <br>
                 <label for="capital">Capital</label>
-                <input type="text" name="capital" value="<?php if(isset($empresa)) { echo $empresa->capital; }?>">
+                <input type="number" name="capital" value="<?php if(isset($empresa)) { echo $empresa->capital; }?>">
                 <br>
                 <?php if(isset($empresa->errors)){ echo $empresa->errors->on('capital'); }?>
                 <br>

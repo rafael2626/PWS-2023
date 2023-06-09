@@ -1,6 +1,6 @@
 <div class="login-box">
     <div class="login-logo">
-        <a href="../../index2.html"><b>Admin</b>LTE</a>
+
     </div>
     <!-- /.login-logo -->
     <div class="card">
@@ -10,31 +10,18 @@
             <form action="index.php?c=login&a=checklogin" method="post">
                 <div class="input-group mb-3">
                     <input type="text" name="username" placeholder="Username">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span class="fas fa-envelope"></span>
-                        </div>
-                    </div>
                 </div>
                 <div class="input-group mb-3">
                     <input type="password" name="password" placeholder="Password">
-                    <div class="input-group-append">
-                        <div class="input-group-text">
-                            <span class="fas fa-lock"></span>
-                        </div>
-                    </div>
                 </div>
                 <div class="row">
                     <div class="col-8">
                     </div>
-                    <!-- /.col -->
                     <div class="col-4">
                         <button type="submit" class="btn btn-primary btn-block">Sign In</button>
                     </div>
-                    <!-- /.col -->
+                    <a href="index.php?c=user&a=create"><p>Registe-se</p>
                 </div>
             </form>
-
-        <!-- /.login-card-body -->
     </div>
 </div>

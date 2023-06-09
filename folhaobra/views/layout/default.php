@@ -190,28 +190,41 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-copy"></i>
-                            <p>
-                                Gestão de Dados
-                                <i class="fas fa-angle-left right"></i>
-                            </p>
-                        </li>
-                        </a>
-                        <a href="index.php?c=empresa&a=index" class="nav-link">
+                        <a href="index.php?c=empresa&a=create" class="nav-link">
                             <i class="nav-icon fas fa-copy"></i>
                             <p>
                                 Gestão de empresas
                                 <i class="fas fa-angle-left right"></i>
                             </p>
                         </a>
-                    <a href="index.php?c=empresa&a=index" class="nav-link">
+                    </li>
+                    <li class="nav-item">
+                    <a href="index.php?c=user&a=create" class="nav-link">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                             Registar Funcionários
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="index.php?c=iva&a=create" class="nav-link">
+                            <i class="nav-icon fas fa-copy"></i>
+                            <p>
+                                Gestão de Ivas
+                                <i class="fas fa-angle-left right"></i>
+                            </p>
+                        </a>
+                </li>
+                    <li class="nav-item">
+                        <a href="index.php?c=servico&a=index" class="nav-link">
+                            <i class="nav-icon fas fa-copy"></i>
+                            <p>
+                                Gestão de Servicos
+                                <i class="fas fa-angle-left right"></i>
+                            </p>
+                        </a>
+                    </li>
                 </ul>
 
             </nav>

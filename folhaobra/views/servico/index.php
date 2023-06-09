@@ -6,7 +6,8 @@
             <thead>
             <th><h3>Id</h3></th>
             <th><h3>Descricao</h3></th>
-            <th><h3>Preco</h3>
+            <th><h3>Referencia</h3>
+            <th><h3>Preco Hora</h3>
             <th><h3>Iva_id</h3></th>
 
             </th>
@@ -18,9 +19,9 @@
 
                     <td><?= $servico->id ?></td>
                     <td><?= $servico->descricao?></td>
-                    <td><?= $servico->preco ?></td>
-                    <td><?= $servico->hora ?></td>
-                    <td><?= $servico->iva_id ?></td>
+                    <td><?= $servico->referencia?></td>
+                    <td><?= $servico->precohora?></td>
+                    <td><?= $servico->ivas_id ?></td>
 
                     <td>
                         <a href="index.php?c=servico&a=show&id=<?= $servico->id ?>"
@@ -38,7 +39,7 @@
     <div class="col-sm-6">
         <h3>Create a Servico</h3>
         <p>
-            <a href="index.php?c=empresa&a=create" class="btn btn-info"
+            <a href="index.php?c=servico&a=create" class="btn btn-info"
                role="button">New</a>
         </p>
     </div>

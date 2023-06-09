@@ -5,6 +5,7 @@
         <table class="table tablestriped">
             <thead>
             <th><h3>Id</h3></th>
+            <th><h3>Valor</h3></th>
             <th><h3>Percentagem</h3></th>
             <th><h3>Descrição</h3>
             <th><h3>Vigor</h3></th>
@@ -15,8 +16,9 @@
             <tbody>
             <?php foreach ($ivas as $iva) { ?>
                 <tr>
-
                     <td><?= $iva->id ?></td>
+                    <td><?= $iva->valor ?></td>
+                    <td><?= $iva->percentagem ?></td>
                     <td><?= $iva->descricao?></td>
                     <td><?= $iva->vigor ?></td>
 

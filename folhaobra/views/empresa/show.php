@@ -27,7 +27,7 @@
             ?>
         </div>
     </div>
-    <a href="./index.php?c=book&a=index">
+    <a href="./index.php?c=empresa&a=index">
         <br>
         <button class="btn btn-success">Voltar</button>
     </a>

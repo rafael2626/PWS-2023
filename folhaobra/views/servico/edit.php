@@ -13,29 +13,27 @@
                 <br>
                 <?php if(isset($servico->errors)){ echo $servico->errors->on('descricao'); }?>
                 <br>
-                <label for="preco">Preco</label>
-                <input type="text" name="preco" value="<?php if(isset($servico)) { echo $servico->preco; }?>">
+                <label for="precohora">Precohora</label>
+                <input type="number" name="precohora" value="<?php if(isset($servico)) { echo $servico->precohora; }?>">
                 <br>
-                <?php if(isset($servico->errors)){ echo $servico->errors->on('preco'); }?>
-                <br>
-                <label for="hora">Hora</label>
-                <input type="text" name="hora" value="<?php if(isset($servico)) { echo $servico->hora; }?>">
-                <br>
-                <?php if(isset($servico->errors)){ echo $servico->errors->on('hora'); }?>
-                <br>
-                <label for="iva_id">Percentagem:</label>
-                <select name="iva_id">
+                   <?php if(isset($servico->errors)){ echo $servico->errors->on('precohora'); }?>
+               <br>
+                   <label for="referencia">Referencia</label>
+                   <input type="number" name="referencia" value="<?php if(isset($servico)) { echo $servico->referencia; }?>">
+                   <br>
+                   <?php if(isset($servico->errors)){ echo $servico->errors->on('referencia'); }?>
+                   <br>
+                   <label for="ivas_id">Iva_ID:</label>
+                <select name="ivas_id">
                     <?php foreach($ivas as $iva){?>
-                        <option value="<?= $iva->id?>"> <?= $iva->percentagem; ?></option>
+                        <option value="<?= $iva->id?>"> <?= $iva->ivas_id; ?></option>
                     <?php } ?>
                     <br>
                     <br>
                 </select>
-                <br>
                 <button  <input type=submit" class="btn btn-success">Editar Servico </button>
             </form>
-            <br>
-            <a href="./index.php?c=empresa&a=index">
+            <a href="./index.php?c=servico&a=index">
                 <button  class="btn btn-danger">Cancelar</button>
             </a>
         </div>

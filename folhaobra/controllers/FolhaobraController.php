@@ -1,10 +1,12 @@
 <?php
 require_once 'models\Folhaobra.php';
 require_once 'controllers\Controller.php';
+use Carbon\Carbon;
 class FolhaobraController extends Controller
 {
     public function index()
     {
+
         $folhaobras = Folhaobra::all();
         $this->renderView('folhaobra', 'index', ['folhaobras' => $folhaobras]);
     }
@@ -23,12 +25,16 @@ class FolhaobraController extends Controller
     }
     public function store()
     {
-        $servico = new Folhaobra($this->getHTTPPost());
-        if($servico->is_valid()){
-            $servico->save();
+        $folhaobra = new Folhaobra();
+        $folhaobra->data =  Carbon::now();
+        $folhaobra->valortotal = 0;
+        $folhaobra->ivatota = 0;
+        $folhaobra->estado = 'lancamento';
+        if($folhaobra->is_valid()){
+            $folhaobra->save();
             $this->redirectToRoute('folhaobra', 'index');
         } else {
-            $this->renderView('folhaobra', 'create',['servico' => $servico]);
+            $this->renderView('folhaobra', 'create',['folhaobra' => $folhaobra]);
         }
     }
     public function edit($id)
@@ -58,5 +64,11 @@ class FolhaobraController extends Controller
         $folhaobra = Folhaobra::find($id);
         $folhaobra->delete();
         $this->redirectToRoute('folhaobra', 'index');
+    }
+    public function select($idcliente)
+    {
+        $users = User::find_all_by_role('cliente');
+        $this->renderView('folhaobra', 'select',[ 'users'   => $users]);
+
     }
 }

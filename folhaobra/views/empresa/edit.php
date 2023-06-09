@@ -7,7 +7,7 @@
         <div class="col">
             <h3>Editar  Empresa</h3>
             <br>
-            <form action="index.php?c=empresa&a=store" method="post">
+            <form action="index.php?c=empresa&a=update&id=<?= $empresa->id ?>" method="post">
                 <label for="designacao">Designacao</label>
                 <input type="text" name="designacao" value="<?php if(isset($empresa)) { echo   $empresa->designacao; }?>">
                 <br>
@@ -29,7 +29,12 @@
                 <label for="nif">Nif</label>
                 <input type="text" name="nif" value="<?php if(isset($empresa)) { echo $empresa->nif; }?>">
                 <br>
-                <?php if(isset($empresa->errors)){ echo $empresa->errors->on('hora'); }?>
+                <?php if(isset($empresa->errors)){ echo $empresa->errors->on('nif'); }?>
+                <br>
+                <label for="codigopostal">Codigopostal</label>
+                <input type="number" name="codigopostal" value="<?php if(isset($empresa)) { echo $empresa->codigopostal; }?>">
+                <br>
+                <?php if(isset($empresa->errors)){ echo $empresa->errors->on('codigopostal'); }?>
                 <br>
                 <label for="morada">Morada</label>
                 <input type="text" name="morada" value="<?php if(isset($empresa)) { echo $empresa->morada; }?>">

@@ -4,7 +4,7 @@ class FOController extends Controller
 {
     public function index()
     {
-        $this->renderView('fo', 'index',[],'default');
+        $this->renderView('fo', 'index',[],'frontoffice');
 
     }
 }

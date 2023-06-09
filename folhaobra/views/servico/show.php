@@ -15,8 +15,8 @@
                 <h1>Servico</h1>
                 ID do Servico : <?= $servicos->id ?><br>
                 Descricao : <?= $servicos->descricao?><br>
-                Preco : <?= $servicos->preco?><br>
-                Hora : <?= $servicos->hora?><br>
+                Preco : <?= $servicos->precohora?><br>
+                Hora : <?= $servicos->referencia?><br>
 
                 <?php
             }

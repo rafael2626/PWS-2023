@@ -28,12 +28,16 @@
                 <input type="number" name="nif" value="<?php if(isset($user)) { echo   $user->nif ; }?>">
                 <?php if(isset($user->errors)){ echo $user->errors->on('nif'); }?>
                 <br>
+                <label for="morada">Morada</label>
+                <input type="number" name="morada" value="<?php if(isset($user)) { echo   $user->morada ; }?>">
+                <?php if(isset($user->errors)){ echo $user->errors->on('morada'); }?>
+                <br>
                 <label for="codigopostal">Codigo Postal</label>
                 <input type="number" name="codigopostal" value="<?php if(isset($user)) { echo   $user->codigopostal ; }?>">
                 <?php if(isset($user->errors)){ echo $user->errors->on('codigopostal'); }?>
                 <br>
                 <label for="localidade">Localidade</label>
-                <input type="text" name="text" value="<?php if(isset($user)) { echo   $user->localidade ; }?>">
+                <input type="text" name="localidade" value="<?php if(isset($user)) { echo   $user->localidade ; }?>">
                 <?php if(isset($user->errors)){ echo $user->errors->on('localidade'); }?>
                 <br>
                 <label for="role">Role</label>

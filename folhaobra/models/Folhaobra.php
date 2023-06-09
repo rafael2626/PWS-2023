@@ -6,6 +6,6 @@ class Folhaobra extends Model
         array('linhaobras')
     );
     static $belongs_to = array(
-        array('users')
+        array('user')
     );
 }

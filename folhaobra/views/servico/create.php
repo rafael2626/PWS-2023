@@ -13,22 +13,22 @@
                 <br>
                 <?php if(isset($servico->errors)){ echo $servico->errors->on('descricao'); }?>
                 <br>
-                <label for="preco">Preco</label>
-                <input type="text" name="preco" value="<?php if(isset($servico)) { echo $servico->preco; }?>">
+                <label for="precohora">Preco Hora</label>
+                <input type="number" name="precohora" value="<?php if(isset($servico)) { echo $servico->precohora; }?>">
                 <br>
-                <?php if(isset($servico->errors)){ echo $servico->errors->on('preco'); }?>
+                <?php if(isset($servico->errors)){ echo $servico->errors->on('precohora'); }?>
                 <br>
-                <label for="hora">Hora</label>
-                <input type="text" name="hora" value="<?php if(isset($servico)) { echo $servico->hora; }?>">
+                <label for="referencia">Referencia</label>
+                <input type="number" name="referencia" value="<?php if(isset($servico)) { echo $servico->referencia; }?>">
                 <br>
-                <?php if(isset($servico->errors)){ echo $servico->errors->on('hora'); }?>
+                <?php if(isset($servico->errors)){ echo $servico->errors->on('referencia'); }?>
                 <br>
-                <label for="iva_id">Percentagem:</label>
-                <select name="iva_id">
+                <label for="ivas_id">IVA_id:</label>
+                <select name="ivas_id">
                     <?php foreach($ivas as $iva){?>
-                        <option value="<?= $iva->id?>"> <?= $iva->percentagem; ?></option>
+                        <option value="<?= $iva->id?>"> <?= $iva->id; ?></option>
                     <?php } ?>
-                    <br>
+
                     <br>
                 </select>
                 <br>

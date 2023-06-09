@@ -41,30 +41,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/wamp64/www/creditapp",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/wamp64/www/folhaobra/views/linhaobra&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\wamp64\www\folhaobra\views\linhaobra" />
       <recent name="C:\wamp64\www\folhaobra\views\servico" />
       <recent name="C:\wamp64\www\folhaobra\views\empresa" />
       <recent name="C:\wamp64\www\folhaobra\public" />
       <recent name="C:\wamp64\www\creditapp\public" />
-      <recent name="C:\wamp64\www\creditapp\Vistas\auth" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\wamp64\www\folhaobra\views\login" />
@@ -153,6 +153,14 @@
       <workItem from="1685709470284" duration="878000" />
       <workItem from="1685710736130" duration="5170000" />
       <workItem from="1685958455468" duration="8428000" />
+      <workItem from="1685973905919" duration="1384000" />
+      <workItem from="1686042665671" duration="3951000" />
+      <workItem from="1686131285869" duration="2886000" />
+      <workItem from="1686136467449" duration="6720000" />
+      <workItem from="1686152106971" duration="4903000" />
+      <workItem from="1686316209938" duration="5640000" />
+      <workItem from="1686326312584" duration="995000" />
+      <workItem from="1686338298299" duration="2010000" />
     </task>
     <servers />
   </component>

@@ -7,27 +7,25 @@
             <h3>Registar Novo IVA</h3>
             <br>
             <form action="index.php?c=iva&a=store" method="post">
-                <label for="iva">Percentagem</label>
+                <label for="percentagem">Valor</label>
+                <input type="text" name="valor" value="<?php if(isset($iva)) { echo   $iva->valor ; }?>">
+                <br>
+                <?php if(isset($iva->errors)){ echo $iva->errors->on('valor'); }?>
+                <br>
+                <label for="percentagem">Percentagem</label>
                 <input type="text" name="percentagem" value="<?php if(isset($iva)) { echo   $iva->percentagem ; }?>">
                 <br>
                 <?php if(isset($iva->errors)){ echo $iva->errors->on('percentagem'); }?>
                 <br>
                 <label for="descricao">Descricao</label>
-                <input type="text" name="isbn" value="<?php if(isset($iva)) { echo $iva->descricao; }?>">
+                <input type="text" name="descricao" value="<?php if(isset($iva)) { echo $iva->descricao; }?>">
                 <br>
                 <?php if(isset($iva->errors)){ echo $iva->errors->on('descricao'); }?>
                 <br>
-                <label for="descricao">vigor</label>
+                <label for="vigor">Vigor</label>
                 <input type="text" name="vigor" value="<?php if(isset($iva)) { echo $iva->vigor; }?>">
                 <br>
                 <?php if(isset($iva->errors)){ echo $iva->errors->on('vigor'); }?>
-                <br>
-                <label for="hora">hora</label>
-                <input type="text" name="hora" value="<?php if(isset($iva)) { echo $iva->hora; }?>">
-                <br>
-                <?php if(isset($iva->errors)){ echo $iva->errors->on('hora'); }?>
-                <br>
-
                 <br>
                 <button  <input type=submit" class="btn btn-success">Registar IVA </button>
             </form>

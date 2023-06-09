@@ -7,18 +7,23 @@
         <div class="col">
             <h3>Editar  IVA</h3>
             <br>
-            <form action="index.php?c=iva&a=store" method="post">
-                <label for="iva">Percentagem</label>
+            <form action="index.php?c=iva&a=update"  <?= $iva->id ?> method="post">
+                <label for="iva">Valor</label>
+                <input type="text" name="valor" value="<?php if(isset($iva)) { echo   $iva->valor ; }?>">
+                <br>
+                <?php if(isset($iva->errors)){ echo $iva->errors->on('valor'); }?>
+                <br>
+                <label for="percentagem">Percentagem</label>
                 <input type="text" name="percentagem" value="<?php if(isset($iva)) { echo   $iva->percentagem ; }?>">
                 <br>
                 <?php if(isset($iva->errors)){ echo $iva->errors->on('percentagem'); }?>
                 <br>
                 <label for="descricao">Descricao</label>
-                <input type="text" name="isbn" value="<?php if(isset($iva)) { echo $iva->descricao; }?>">
+                <input type="text" name="descricao" value="<?php if(isset($iva)) { echo $iva->descricao; }?>">
                 <br>
                 <?php if(isset($iva->errors)){ echo $iva->errors->on('descricao'); }?>
                 <br>
-                <label for="descricao">vigor</label>
+                <label for="vigor">vigor</label>
                 <input type="text" name="vigor" value="<?php if(isset($iva)) { echo $iva->vigor; }?>">
                 <br>
                 <?php if(isset($iva->errors)){ echo $iva->errors->on('vigor'); }?>

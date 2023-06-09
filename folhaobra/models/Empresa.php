@@ -14,15 +14,9 @@ class Empresa extends Model
 
     );
     static $validates_size_of = array(
+        /*kk*/
         array('designacao', 'maximum' => 20),
         array('telefone', 'maximum' => 9),
         array('nif', 'maximum' => 9),
-    
-
-    );
-    static $validates_numericality_of = array(
-        array('telefone', 'only_integer' => true),
-        array('nif', 'only_integer' => true),
-        array('capital', 'only_integer' => true),
     );
 }

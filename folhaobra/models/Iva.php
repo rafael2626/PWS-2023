@@ -1,9 +1,26 @@
 <?php
+
 use ActiveRecord\Model;
+
 class Iva extends \ActiveRecord\Model
 {
-    static $belongs_to = array(
-        array('servicos'),
-        array('linasobras')
+
+    static $validates_presence_of = array(
+        array('percentagem', 'message' => 'A percentagem tem que ser preenchida'),
+        array('descricao', 'message' => 'A descricao tem que ser preenchida'),
+        array('vigor', 'message' => ' Tem que ser preenchida'),
+    );
+    static $validates_size_of = array(
+        /*11*/
+        array('percentagem', 'maximum' => 2),
+        /*kk*/
+        array('descricao', 'maximum' => 10),
+
+
+
+    );
+    static $validates_numericality_of = array(
+        /*+/-*/
+        array('percentagem', 'only_integer' => true),
     );
 }

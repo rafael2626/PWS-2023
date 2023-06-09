@@ -6,12 +6,16 @@ class ServicoController extends Controller
 {
     public function index()
     {
+        $this->authenticationFilterAllows(['admin','funcionario']);
+
         $servicos = Servico::all();
         $this->renderView('servico', 'index', ['servicos' => $servicos]);
     }
 
     public function show($id)
     {
+        $this->authenticationFilterAllows(['admin','funcionario']);
+
         $servico = Servico::find($id);
         if (is_null($servico)) {
             $this->renderView('servico', 'show', ['servicos' => $servico, 'id' => $id]);
@@ -22,23 +26,28 @@ class ServicoController extends Controller
 
     public function create()
     {
+        $this->authenticationFilterAllows(['admin','funcionario']);
 
         $this->renderView('servico', 'create');
     }
 
     public function store()
     {
+        $this->authenticationFilterAllows(['admin','funcionario']);
+
         $servico = new Servico($this->getHTTPPost());
         if($servico->is_valid()){
             $servico->save();
             $this->redirectToRoute('servico', 'index');
         } else {
-            $this->renderView('servico', 'create',['servico' => $servico]);
+            $ivas = Iva::all();
+            $this->renderView('servico', 'create',['servico' => $servico,'ivas' => $ivas]);
         }
     }
 
     public function edit($id)
     {
+
         $ivas = Iva::all();
         $servico = Servico::find($id);
         if (is_null($servico)) {
@@ -50,6 +59,8 @@ class ServicoController extends Controller
 
     public function update($id)
     {
+        $this->authenticationFilterAllows(['admin','funcionario']);
+
         $ivas = Iva::all();
         $servico = Servico::find($id);
         $servico->update_attributes($this->getHTTPPost());
@@ -63,6 +74,8 @@ class ServicoController extends Controller
 
     public function delete($id)
     {
+        $this->authenticationFilterAllows(['admin','funcionario']);
+
         $servico = Servico::find($id);
         $servico->delete();
         $this->redirectToRoute('servico', 'index');

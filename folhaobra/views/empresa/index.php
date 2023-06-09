@@ -9,6 +9,7 @@
             <th><h3>Capital Social</h3>
             <th><h3>Email</h3></th>
             <th><h3>Telefone</h3>
+            <th><h3>Codigo Postal</h3>
             <th><h3>Nif</h3>
             <th><h3>Morada</h3>
             <th><h3>Localidade</h3>
@@ -24,10 +25,10 @@
                     <td><?= $empresa->capital ?></td>
                     <td><?= $empresa->email ?></td>
                     <td><?= $empresa->telefone ?></td>
+                    <td><?= $empresa->codigopostal ?></td>
                     <td><?= $empresa->nif ?></td>
                     <td><?= $empresa->morada ?></td>
                     <td><?= $empresa->localidade ?></td>
-
                     <td>
                         <a href="index.php?c=empresa&a=show&id=<?= $empresa->id ?>"
                            class="btn btn-info" role="button">Show</a>

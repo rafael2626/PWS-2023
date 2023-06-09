@@ -4,8 +4,7 @@
                     <div class="row">
                         <div class="col-12">
                             <h4>
-                                 Dados da Empresas
-
+                                 Dados da Empresa
                             </h4>
                         </div>
                     </div>
@@ -22,6 +21,18 @@
                             <h4>Data:</h4>
                             <h4>Nº Fatura:</h4>
                         </div>
+
+
+
+
+
+
+
+
+
+
+
+
 
                     <div class="row">
                         <div class="col-12 table-responsive">
