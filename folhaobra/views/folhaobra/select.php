@@ -11,10 +11,13 @@
     <div class="col-sm-12">
         <table class="table tablestriped">
 
-            <?php foreach ($users as $user) { ?>
+            <?php foreach ($users as $user) {
+
+
+                ?>
             <tr>
                 <td><?= $user->username?></td>
-               <td> <input type="submit" value="Selecionar"></td>
+                <td> <a href="index.php?c=folhaobra&a=store?idcliente<?= $user->id ?>"> Seleccionar </a></td>
                 <?php } ?>
             </tr>
             <tbody>

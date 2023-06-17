@@ -20,7 +20,7 @@ class UserController extends Controller
         if (is_null($user)) {
             $this->renderView('user', 'show', ['users' => $user, 'id' => $id]);
         } else {
-            $this->renderView('users', 'show', ['users' => $user]);
+            $this->renderView('user', 'show', ['users' => $user]);
         }
     }
 
@@ -58,7 +58,7 @@ class UserController extends Controller
 
     public function update($id)
     {
-        $this->authenticationFilterAllows(['admin']);
+
 
         $user = User::find($id);
         $user->update_attributes($this->getHTTPPost());

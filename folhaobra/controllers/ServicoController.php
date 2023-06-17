@@ -27,8 +27,8 @@ class ServicoController extends Controller
     public function create()
     {
         $this->authenticationFilterAllows(['admin','funcionario']);
-
-        $this->renderView('servico', 'create');
+        $ivas = Iva::all();
+        $this->renderView('servico', 'create', ['ivas' => $ivas]);
     }
 
     public function store()

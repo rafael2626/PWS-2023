@@ -11,17 +11,16 @@ class User extends ActiveRecord\Model
         array('morada', 'message' => 'A morada tem que ser preenchida'),
         array('localidade', 'message' => 'A localidade tem que ser preenchida'),
         array('codigopostal', 'message' => 'O codligo postal tem que ser preenchida'),
-
-       array('role', 'message' => '0 role tem que ser preenchido'),
+        array('role', 'message' => '0 role tem que ser preenchido'),
     );
    static $validates_size_of = array(
-        array('username', 'maximum' => 9),
-        array('password', 'maximum' => 30),
+        array('username', 'maximum' => 20),
+        array('password', 'maximum' => 20),
         array('email', 'maximum' => 60),
-        array('morada', 'maximum' => 1),
-        array('nif', 'maximum' => 9),
-        array('codigopostal','maximum' => 30),
-        array('localidade','maximum' => 80),
+        array('morada', 'maximum' => 20),
+        array('nif', 'maximum' => 11),
+        array('codigopostal','maximum' => 7),
+        array('localidade','maximum' => 50),
         array('role', 'maximum' => 15)
     );
     static $validates_format_of = array(

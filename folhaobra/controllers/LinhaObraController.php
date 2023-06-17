@@ -1,15 +1,16 @@
 <?php
 require_once 'models\LinhaObra.php';
 require_once 'models\Empresa.php';
+require_once 'models\Folhaobra.php';
 require_once 'controllers\Controller.php';
 
 class LinhaObraController extends Controller
 {
-    public function index()
+    public function index($idfolhaobra)
     {
         $empresas = Empresa::all();
-        $folhaobras = Folhaobra::all();
-        $this->renderView('folhaobra', 'index', ['empresas' => $empresas]);
+        $folhaobras = Folhaobra::find($idfolhaobra);
+        $this->renderView('folhaobra', 'index', ['empresas' => $empresas,'folhaobras' => $folhaobras , 'idfolhaobra' => $idfolhaobra]);
     }
 
     public function show($id)
@@ -24,8 +25,9 @@ class LinhaObraController extends Controller
 
     public function store()
     {
+
         $linhaobras = new LinhaObra($this->getHTTPPost());
-        $linhaobras->valor = $linhaobras->quantidade * $linhaobras->servicos_id->precohora;
+        $linhaobras->valor = $linhaobras->quantidade * $linhaobras->servico->precohora;
         $linhaobras->valoriva = $linhaobras->valor * $linhaobras;
         $linhaobras->subtotal = $linhaobras->valor + $linhaobras->valoriva;
         if ($linhaobras->is_valid()) {
@@ -35,6 +37,7 @@ class LinhaObraController extends Controller
 
     public function select()
     {
-
+        $linhaobra = LinhaObra::all();
+        $this->renderView('linhaobra', 'select', ['linhaobra'=> $linhaobra]);
     }
 }

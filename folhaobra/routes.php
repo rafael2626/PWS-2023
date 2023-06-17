@@ -39,6 +39,8 @@ return [
         'edit' => ['GET', 'LinhaobraController', 'edit'],
         'update' => ['POST', 'LinhaobraController', 'update'],
         'delete' => ['GET', 'LinhaobraController', 'delete'],
+        'select' => ['GET', 'LinhaobraController', 'select'],
+
     ],
     'folhaobra' => [
         'index' => ['GET', 'FolhaobraController', 'index'],

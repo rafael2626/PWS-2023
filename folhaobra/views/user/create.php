@@ -45,12 +45,13 @@
                 <select name="role"  class="form-control">
 
                     <?php
-                    foreach(['','admin','funcionario']as $opcao)
+                    foreach(['','admin','funcionario','cliente']as $opcao)
                     {
                         echo "<option value='" . $opcao. "'".($opcao == $user->role?"selected":"") . ">" . $opcao . "</option>";
                     }
                     ?>
                 </select>
+                <a href="./index.php?c=login&a=index">
                 <button class="btn btn-success" type="submit">Registar Funcionario</button>
             </form>
         </div>

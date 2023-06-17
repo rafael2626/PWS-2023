@@ -7,7 +7,7 @@
         <div class="col">
             <h3>Editar  Servico</h3>
             <br>
-               <form action="index.php?c=servico&a=store" method="post">
+               <form action="index.php?c=servico=&a=update&id" method="post">
                 <label for="descricao">Descricao</label>
                 <input type="text" name="descricao" value="<?php if(isset($servico)) { echo $servico->descricao; }?>">
                 <br>

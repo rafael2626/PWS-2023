@@ -1,12 +1,13 @@
 <?php
 require_once 'models\Folhaobra.php';
+require_once 'models\LinhaObra.php';
+require_once 'models\Empresa.php';
 require_once 'controllers\Controller.php';
 use Carbon\Carbon;
 class FolhaobraController extends Controller
 {
     public function index()
     {
-
         $folhaobras = Folhaobra::all();
         $this->renderView('folhaobra', 'index', ['folhaobras' => $folhaobras]);
     }
@@ -21,10 +22,12 @@ class FolhaobraController extends Controller
     }
     public function create()
     {
-        $this->renderView('folhaobra', 'create');
+        $empresas = Empresa::all();
+        $this->renderView('folhaobra', 'create',['empresas' => $empresas]);
     }
-    public function store()
+    public function store($idcliente)
     {
+
         $folhaobra = new Folhaobra();
         $folhaobra->data =  Carbon::now();
         $folhaobra->valortotal = 0;
@@ -32,7 +35,7 @@ class FolhaobraController extends Controller
         $folhaobra->estado = 'lancamento';
         if($folhaobra->is_valid()){
             $folhaobra->save();
-            $this->redirectToRoute('folhaobra', 'index');
+            $this->redirectToRoute('folhaobra', 'index',['idcliente' => $idcliente,'folhaobra' => $folhaobra]);
         } else {
             $this->renderView('folhaobra', 'create',['folhaobra' => $folhaobra]);
         }
@@ -65,10 +68,10 @@ class FolhaobraController extends Controller
         $folhaobra->delete();
         $this->redirectToRoute('folhaobra', 'index');
     }
-    public function select($idcliente)
+    public function select()
     {
         $users = User::find_all_by_role('cliente');
-        $this->renderView('folhaobra', 'select',[ 'users'   => $users]);
+        $this->renderView('folhaobra', 'select',[ 'users'=> $users]);
 
     }
 }

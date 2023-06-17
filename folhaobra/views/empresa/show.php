@@ -12,7 +12,7 @@
             else
             {
                 ?>
-                <h1>Book</h1>
+                <h1>Empresa</h1>
                 ID da Empresa: <?= $empresas->id ?><br>
                 Designacao Social: <?= $empresas->designacao?><br>
                 Capital Social : <?= $empresas->capital?><br>

@@ -162,7 +162,7 @@
                 <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu"
                     data-accordion="false">
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="index.php?c=folhaobra&a=index" class="nav-link">
                             <i class="nav-icon fas fa-copy"></i>
                             <p>
                                Emitir FO
@@ -190,7 +190,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                        <a href="index.php?c=empresa&a=create" class="nav-link">
+                        <a href="index.php?c=empresa&a=index" class="nav-link">
                             <i class="nav-icon fas fa-copy"></i>
                             <p>
                                 Gestão de empresas
@@ -199,7 +199,7 @@
                         </a>
                     </li>
                     <li class="nav-item">
-                    <a href="index.php?c=user&a=create" class="nav-link">
+                    <a href="index.php?c=user&a=index" class="nav-link">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
                             Registar Funcionários
@@ -208,7 +208,7 @@
                     </a>
                     </li>
                     <li class="nav-item">
-                        <a href="index.php?c=iva&a=create" class="nav-link">
+                        <a href="index.php?c=iva&a=index" class="nav-link">
                             <i class="nav-icon fas fa-copy"></i>
                             <p>
                                 Gestão de Ivas

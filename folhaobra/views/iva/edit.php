@@ -7,7 +7,7 @@
         <div class="col">
             <h3>Editar  IVA</h3>
             <br>
-            <form action="index.php?c=iva&a=update"  <?= $iva->id ?> method="post">
+            <form action="index.php?c=iva&a=update&id"  <?= $iva->id ?> method="post">
                 <label for="iva">Valor</label>
                 <input type="text" name="valor" value="<?php if(isset($iva)) { echo   $iva->valor ; }?>">
                 <br>
