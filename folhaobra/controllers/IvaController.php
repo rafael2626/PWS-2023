@@ -18,8 +18,6 @@ class IvaController extends Controller
     public function show($id)
     {
         $this->authenticationFilterAllows(['admin','funcionario']);
-
-
         $iva = Iva::find($id);
         if (is_null($iva)) {
             $this->renderView('iva', 'show', ['ivas' => $iva, 'id' => $id]);
@@ -37,6 +35,8 @@ class IvaController extends Controller
     public function store()
     {
         $this->authenticationFilterAllows(['admin','funcionario']);
+
+
 
         $iva = new Iva($this->getHTTPPost());
         if($iva->is_valid()){

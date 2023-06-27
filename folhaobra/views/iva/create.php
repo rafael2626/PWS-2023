@@ -7,13 +7,8 @@
             <h3>Registar Novo IVA</h3>
             <br>
             <form action="index.php?c=iva&a=store" method="post">
-                <label for="percentagem">Valor</label>
-                <input type="text" name="valor" value="<?php if(isset($iva)) { echo   $iva->valor ; }?>">
-                <br>
-                <?php if(isset($iva->errors)){ echo $iva->errors->on('valor'); }?>
-                <br>
                 <label for="percentagem">Percentagem</label>
-                <input type="text" name="percentagem" value="<?php if(isset($iva)) { echo   $iva->percentagem ; }?>">
+                <input type="number" name="percentagem" value="<?php if(isset($iva)) { echo   $iva->percentagem ; }?>">
                 <br>
                 <?php if(isset($iva->errors)){ echo $iva->errors->on('percentagem'); }?>
                 <br>
@@ -23,8 +18,16 @@
                 <?php if(isset($iva->errors)){ echo $iva->errors->on('descricao'); }?>
                 <br>
                 <label for="vigor">Vigor</label>
-                <input type="text" name="vigor" value="<?php if(isset($iva)) { echo $iva->vigor; }?>">
                 <br>
+                <select name="vigor"  class="form-control">
+                    <?php
+                    foreach(['','0','1']as $opcao)
+                    {
+                        echo "<option value='" . $opcao. "'".($opcao == $iva->vigor?"selected":"") . ">" . $opcao . "</option>";
+                    }
+                    ?>
+                </select>
+
                 <?php if(isset($iva->errors)){ echo $iva->errors->on('vigor'); }?>
                 <br>
                 <button  <input type=submit" class="btn btn-success">Registar IVA </button>

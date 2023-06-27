@@ -15,8 +15,19 @@ class Empresa extends Model
     );
     static $validates_size_of = array(
         /*kk*/
+
         array('designacao', 'maximum' => 20),
+        array('email', 'maximum' => 70),
         array('telefone', 'maximum' => 9),
+        array('morada', 'maximum' => 30),
         array('nif', 'maximum' => 9),
+        array('codigopostal', 'maximum' => 7),
+        /*duvida se e 1 milhao*/
+        array('localidade', 'maximum' => 50),
+
+        array('capital', 'maximum' => 3),
+    );
+    static $validates_format_of = array(
+        array('email', 'with' => '/^[^0-9][A-z0-9_]+([.][A-z0-9_]+)*[@][A-z0-9_]+([.][A-z0-9_]+)*[.][A-z]{2,4}$/')
     );
 }

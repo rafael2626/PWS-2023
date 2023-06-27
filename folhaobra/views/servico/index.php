@@ -8,7 +8,7 @@
             <th><h3>Descricao</h3></th>
             <th><h3>Referencia</h3>
             <th><h3>Preco Hora</h3>
-            <th><h3>Iva_id</h3></th>
+            <th><h3>Percentagem</h3></th>
 
             </th>
             <th><h3>User Actions</h3></th>
@@ -21,7 +21,8 @@
                     <td><?= $servico->descricao?></td>
                     <td><?= $servico->referencia?></td>
                     <td><?= $servico->precohora?></td>
-                    <td><?= $servico->ivas_id ?></td>
+                    <td><?= $servico->iva->descricao ?></td>
+
 
                     <td>
                         <a href="index.php?c=servico&a=show&id=<?= $servico->id ?>"

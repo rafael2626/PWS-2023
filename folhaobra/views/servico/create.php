@@ -14,7 +14,7 @@
                 <?php if(isset($servico->errors)){ echo $servico->errors->on('descricao'); }?>
                 <br>
                 <label for="precohora">Preco Hora</label>
-                <input type="text" name="precohora" value="<?php if(isset($servico)) { echo $servico->precohora; }?>">
+                <input type="number" name="precohora" value="<?php if(isset($servico)) { echo $servico->precohora; }?>">
                 <br>
                 <?php if(isset($servico->errors)){ echo $servico->errors->on('precohora'); }?>
                 <br>
@@ -23,7 +23,7 @@
                 <br>
                 <?php if(isset($servico->errors)){ echo $servico->errors->on('referencia'); }?>
                 <br>
-                <label for="iva_id">IVA_id:</label>
+                <label for="iva_id">Percentagem:</label>
                 <select name="iva_id">
                     <?php foreach($ivas as $iva){?>
                         <option value="<?= $iva->id?>"> <?= $iva->percentagem; ?></option>

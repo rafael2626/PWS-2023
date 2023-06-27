@@ -1,43 +1,46 @@
 <?php
 require_once 'models\LinhaObra.php';
 require_once 'models\Empresa.php';
+require_once 'models\Servico.php';
 require_once 'models\Folhaobra.php';
 require_once 'controllers\Controller.php';
 
 class LinhaObraController extends Controller
 {
-    public function index($idfolhaobra)
+    public function index(/*$idfolhaobra*/)
     {
         $empresas = Empresa::all();
-        $folhaobras = Folhaobra::find($idfolhaobra);
-        $this->renderView('folhaobra', 'index', ['empresas' => $empresas,'folhaobras' => $folhaobras , 'idfolhaobra' => $idfolhaobra]);
+        $this->renderView('linhaobra', 'index', ['empresas' => $empresas]);
     }
 
     public function show($id)
     {
 
     }
-
-    public function create()
+    public function create(/*$idfolhaobra ,$idservico*/)
     {
-        $this->renderView('linhaobra', 'create');
+        $empresas = Empresa::all();
+
+        $this->renderView('linhaobra', 'create', ['empresas' => $empresas]);
     }
 
     public function store()
     {
-
-        $linhaobras = new LinhaObra($this->getHTTPPost());
-        $linhaobras->valor = $linhaobras->quantidade * $linhaobras->servico->precohora;
-        $linhaobras->valoriva = $linhaobras->valor * $linhaobras;
-        $linhaobras->subtotal = $linhaobras->valor + $linhaobras->valoriva;
-        if ($linhaobras->is_valid()) {
-            $linhaobras->save();
+        $folhasobra = new Folhaobra($this->getHTTPPost());
+        $linhaobra = new LinhaObra($this->getHTTPPost());
+       /* $linhaobra->quantidade*/
+      /*  $linhaobra->referencia*/
+        $linhaobra->valortotal = $linhaobra->quantidade * $linhaobra->servico->precohora;
+        $linhaobra->valoriva = $linhaobra->valortotal * $linhaobra->servico->percentagem;
+        $folhasobra->subtotal = $linhaobra->valortotal + $folhasobra->valoriva;
+        if ($linhaobra->is_valid()) {
+            $linhaobra->save();
         }
     }
 
     public function select()
     {
-        $linhaobra = LinhaObra::all();
-        $this->renderView('linhaobra', 'select', ['linhaobra'=> $linhaobra]);
+        $servicos = Servico::all();
+        $this->renderView('linhaobra', 'select', ['servicos'=> $servicos ]);
     }
 }

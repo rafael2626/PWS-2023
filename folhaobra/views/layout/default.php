@@ -172,7 +172,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link">
+                        <a href="index.php?c=folhaobra&a=index" class="nav-link">
                             <i class="nav-icon fas fa-copy"></i>
                             <p>
                           FO Emitidas
@@ -180,14 +180,6 @@
                             </p>
                         </a>
                     </li>
-                    <li class="nav-item">
-                        <a href="#" class="nav-link">
-                            <i class="nav-icon fas fa-copy"></i>
-                            <p>
-                             Registo Clientes
-                                <i class="fas fa-angle-left right"></i>
-                            </p>
-                        </a>
                     </li>
                     <li class="nav-item">
                         <a href="index.php?c=empresa&a=index" class="nav-link">
@@ -232,15 +224,10 @@
         </div>
         <!-- /.sidebar -->
     </aside>
-    <!-- Content Wrapper. Contains page content -->
-    <div class="content-wrapper">
-        <!-- Content Header (Page header) -->
-        <section class="content-header">
-            <div class="container-fluid">
-                <div class="row mb-2">
-                    <div class="col-sm-6">
+    <div class="content-wrapper" xmlns="http://www.w3.org/1999/html">
                         <?php require_once($viewPath); ?>
-                    </div>
+    </div>
+
 
 </body>
 </html>

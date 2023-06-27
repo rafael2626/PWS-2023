@@ -4,7 +4,6 @@ use ActiveRecord\Model;
 
 class Iva extends \ActiveRecord\Model
 {
-
     static $validates_presence_of = array(
         array('percentagem', 'message' => 'A percentagem tem que ser preenchida'),
         array('descricao', 'message' => 'A descricao tem que ser preenchida'),
@@ -19,8 +18,5 @@ class Iva extends \ActiveRecord\Model
 
 
     );
-    static $validates_numericality_of = array(
-        /*+/-*/
-        array('percentagem', 'only_integer' => true),
-    );
+
 }

@@ -7,13 +7,21 @@
     <div class="col-sm-12">
         <table class="table tablestriped">
 
-            <?php foreach ($linhaobras as $linhaobra) {
-
+            <?php foreach ($servicos as $servico) {
 
             ?>
             <tr>
-                <td><?= $linhaobra->quantidade?></td>
-                <td> <a href="index.php?c=linhaobra&a=store?idcliente<?= $linhaobra->id ?>"> Seleccionar </a></td>
+                <td>Referência</td>
+                <td>Descricao</td>
+                <td>Preco/Hora</td>
+                <td>Percentagem</td>
+            </tr>
+            <tr>
+                <td><?= $servico->referencia?></td>
+                <td><?= $servico->descricao?></td>
+                <td><?= $servico->precohora?></td>
+                <td><?= $servico->iva->percentagem?></td>
+                <td> <a href="index.php?c=linhaobra&a=create?idservico<?= $servico->id ?>"> Seleccionar </a></td>
                 <?php } ?>
             </tr>
             <tbody>

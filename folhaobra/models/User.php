@@ -3,8 +3,8 @@ use ActiveRecord\Model;
 class User extends ActiveRecord\Model
 {
    static $validates_presence_of = array(
-        array('username', 'message' => 'A designacao tem que ser preenchida'),
-        array('password', 'message' => 'O email tem que ser preenchido'),
+        array('username', 'message' => 'O nome tem que ser preenchida'),
+        array('password', 'message' => 'A password tem que ser preenchido'),
         array('email', 'message' => 'O email tem que ser preenchido'),
         array('telefone', 'message' => 'O telefone tem que ser preenchido'),
         array('nif', 'message' => 'O nif tem que ser preenchido'),
@@ -23,9 +23,7 @@ class User extends ActiveRecord\Model
         array('localidade','maximum' => 50),
         array('role', 'maximum' => 15)
     );
-    static $validates_format_of = array(
-        array('email', 'with' => '/^[^0-9][A-z0-9_]+([.][A-z0-9_]+)*[@][A-z0-9_]+([.][A-z0-9_]+)*[.][A-z]{2,4}$/')
-    );
+
     static $validates_inclusion_of = array(
         array('role', 'in' => array ('admin', 'funcionario', 'cliente'))
     );

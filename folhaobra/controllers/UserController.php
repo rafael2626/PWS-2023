@@ -9,7 +9,7 @@ class UserController extends Controller
         $this->authenticationFilterAllows(['admin']);
 
         $users = User::all();
-        $this->renderView('user', 'index', ['user' => $users]);
+        $this->renderView('user', 'index', ['users' => $users]);
     }
 
     public function show($id)
@@ -59,6 +59,7 @@ class UserController extends Controller
     public function update($id)
     {
 
+        $this->authenticationFilterAllows(['admin']);
 
         $user = User::find($id);
         $user->update_attributes($this->getHTTPPost());

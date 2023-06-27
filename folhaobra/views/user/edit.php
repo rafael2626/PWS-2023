@@ -7,6 +7,7 @@
         <div class="col">
             <h3>Editar  Funcionario</h3>
             <br>
+
             <form action="index.php?c=user&a=update&id=<?= $user->id ?>" method="post">
                 <label for="username">Username</label>
                 <input type="text" name="username" value="<?php if(isset($user)) { echo   $user->username ; }?>">

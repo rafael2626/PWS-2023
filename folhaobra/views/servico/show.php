@@ -16,8 +16,7 @@
                 ID do Servico : <?= $servicos->id ?><br>
                 Descricao : <?= $servicos->descricao?><br>
                 Preco : <?= $servicos->precohora?><br>
-                Hora : <?= $servicos->referencia?><br>
-
+                Referencia : <?= $servicos->referencia?><br>
                 <?php
             }
             ?>

@@ -1,1 +1,1 @@
-	SELECT * FROM obras.users;
+SELECT * FROM obras.empresas;

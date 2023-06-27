@@ -1,64 +1,90 @@
-<div class="container-fluid">
+<section class="content-header">
+    <div class="container-fluid">
+        <div class="row mb-2">
+        </div>
 
-    <div class="invoice p-3 mb-3">
-        <div class="row">
-            <div class="col-12">
-                <h4>
-                    <?php foreach ($empresas as $empresa) { ?>
-                    Dados da Empresa  </h4>
-                        <br>
-                    <td> <p>Designação: <?=$empresa->designacao?></p></td>
-                <td> <p>Capital : <?=$empresa->capital?></p></td>
-                <td> <p>Email : <?=$empresa->email?></p></td>
-                <td> <p>Telefone : <?=$empresa->telefone?></p></td>
-                <td> <p>NIF : <?=$empresa->nif?></p></td>
-                <td> <p>Morada : <?=$empresa->morada?></p></td>
-                <td> <p>Localidade : <?=$empresa->localidade?></p></td>
-                    <?php } ?>
+        <div class="row invoice-info">
+            <div class="col-sm-4 invoice-col">
+                <h3>Dados Empresa</h3><br>
+                <?php foreach ($empresas as $empresa) { ?>
+                    <b>Designação: </b> <?= $empresa->designacao ?><br>
+                    <b>Morada: </b> <?= $empresa->morada ?><br>
+                    <b>Localidade: </b> <?= $empresa->localidade ?><br>
+                    <b>Telefone: </b> <?= $empresa->telefone ?><br>
+                    <b>Email: </b> <?= $empresa->email ?><br>
+                    <b>NIF: </b> <?= $empresa->nif ?><br>
+                    <b>Capital Soical </b> <?= $empresa->capital ?><br>
+                <?php } ?>
             </div>
-            <div class="invoice p-3 mb-3">
-                <div class="row">
-                    <div class="col-12">
-                        <h1>sdd</h1>
+            <div class="col-sm-4 invoice-col">
+                <address>
+                    <h3>Dados Cliente</h3><br>
+                    <button><a href="index.php?c=folhaobra&a=select ">Selecionar Cliente</a></button>
+
+                </address>
+            </div>
         </div>
 
 
+        <div class="row">
+            <div class="col-12 table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                    <tr>
+                        <th>Referencia</th>
+                        <th>Des</th>
+                        <th>Qua</th>
+                        <th>Preco/Hora</th>
+                        <th>IVA</th>
+                        <th>SubTotal</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr>
+                        <td>
+                        </td>
+                    </tr>
+                    <tr>
 
+                    </tr>
+                    <tr>
+                    </tr>
+                    </tbody>
+                </table>
             </div>
-            <div class="col-sm-4 invoice-col">
-                <h4>Data:</h4>
-                <h4>Nº Fatura:</h4>
+
+        </div>
+
+        <div class="row">
+
+            <div class="col-6">
+                <p class="lead">Payment Methods:</p>
+                <img src="../../dist/img/credit/visa.png" alt="Visa">
+                <img src="../../dist/img/credit/mastercard.png" alt="Mastercard">
+                <img src="../../dist/img/credit/american-express.png" alt="American Express">
+                <img src="../../dist/img/credit/paypal2.png" alt="Paypal">
+                <p class="text-muted well well-sm shadow-none" style="margin-top: 10px;">
+                    Etsy doostang zoodles disqus groupon greplin oooj voxy zoodles, weebly ning heekya handango imeem
+                    plugg
+                    dopplr jibjab, movity jajah plickers sifteo edmodo ifttt zimbra.
+                </p>
             </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-            <div class="row">
-                <div class="col-12 table-responsive">
-                    <table class="table table-striped">
-                        <thead>
+            <div class="col-6">
+                <p class="lead">Amount Due 2/22/2014</p>
+                <div class="table-responsive">
+                    <table class="table">
                         <tr>
-                            <th>Referencia</th>
-                            <th>Descrição</th>
-                            <th>Quantidade</th>
-                            <th>Preço Unitário</th>
-                            <th>Iva Valor</th>
-                            <th>Valor</th>
-                            <th>SubTotal</th>
+                            <th>SubTotal:</th>
                         </tr>
-
-
-                        </thead>
-                        <tbody>
-
-</div>
+                        <tr>
+                            <th>Total IVA:</th>
+                        </tr>
+                        <tr>
+                            <th>Total:</th>
+                        </tr>
+                    </table>
+                </div>
             </div>
+        </div>
+

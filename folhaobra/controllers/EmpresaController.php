@@ -66,6 +66,13 @@ class EmpresaController extends Controller
             $this->renderView('empresa', 'edit', ['empresa' => $empresa]);
         }
     }
+
+
+
+
+
+
+
     public function delete($id)
     {
         $this->authenticationFilterAllows(['admin','funcionario']);

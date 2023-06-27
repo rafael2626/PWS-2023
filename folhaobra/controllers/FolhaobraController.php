@@ -8,8 +8,9 @@ class FolhaobraController extends Controller
 {
     public function index()
     {
+        $empresas = Empresa::all();
         $folhaobras = Folhaobra::all();
-        $this->renderView('folhaobra', 'index', ['folhaobras' => $folhaobras]);
+        $this->renderView('folhaobra', 'index', ['folhaobras' => $folhaobras,'empresas' => $empresas]);
     }
     public function show($id)
     {
@@ -22,20 +23,23 @@ class FolhaobraController extends Controller
     }
     public function create()
     {
+        $folhaobra = Folhaobra::all();
         $empresas = Empresa::all();
         $this->renderView('folhaobra', 'create',['empresas' => $empresas]);
     }
     public function store($idcliente)
     {
-
+        $auth = new Auth();
         $folhaobra = new Folhaobra();
         $folhaobra->data =  Carbon::now();
         $folhaobra->valortotal = 0;
-        $folhaobra->ivatota = 0;
+        $folhaobra->ivatotal = 0;
         $folhaobra->estado = 'lancamento';
+        $folhaobra->user_id = $auth->getUserId();
+        $folhaobra->cliente_id = $idcliente;
         if($folhaobra->is_valid()){
-            $folhaobra->save();
-            $this->redirectToRoute('folhaobra', 'index',['idcliente' => $idcliente,'folhaobra' => $folhaobra]);
+            $folhaobra->save($idcliente);
+            $this->redirectToRoute('folhaobra', 'create',['idcliente' => $idcliente,'folhaobra' => $folhaobra]);
         } else {
             $this->renderView('folhaobra', 'create',['folhaobra' => $folhaobra]);
         }
