@@ -8,11 +8,6 @@
             <h3>Editar  IVA</h3>
             <br>
             <form action="index.php?c=iva&a=update&id=  <?= $iva->id ?>" method="post">
-                <label for="iva">Valor</label>
-                <input type="text" name="valor" value="<?php if(isset($iva)) { echo   $iva->valor ; }?>">
-                <br>
-                <?php if(isset($iva->errors)){ echo $iva->errors->on('valor'); }?>
-                <br>
                 <label for="percentagem">Percentagem</label>
                 <input type="text" name="percentagem" value="<?php if(isset($iva)) { echo   $iva->percentagem ; }?>">
                 <br>

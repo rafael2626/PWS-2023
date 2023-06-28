@@ -12,7 +12,7 @@
             <tr>
                 <td><?= $user->id?></td>
                 <td><?= $user->username?></td>
-                <td> <a href="index.php?c=linhaobra&a=index ">< Seleccionar </a></td>
+                <td> <a href="index.php?c=linhaobra&a=index "> Seleccionar </a></td>
                 <?php } ?>
             </tr>
 

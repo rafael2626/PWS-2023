@@ -7,7 +7,7 @@
         <div class="col">
             <h3>Editar  Servico</h3>
             <br>
-               <form action="index.php?c=servico=&a=update&id =<?= $servico->id ?>" method="post">
+            <form action="index.php?c=servico&a=update&id=<?= $servico->id ?>" method="post">
                 <label for="descricao">Descricao</label>
                 <input type="text" name="descricao" value="<?php if(isset($servico)) { echo $servico->descricao; }?>">
                 <br>
@@ -23,15 +23,15 @@
                    <br>
                    <?php if(isset($servico->errors)){ echo $servico->errors->on('referencia'); }?>
                    <br>
-                   <label for="ivas_id">Iva_ID:</label>
-                <select name="ivas_id">
+                   <label for="iva_id">Percentagem:</label>
+                <select name="iva_id">
                     <?php foreach($ivas as $iva){?>
-                        <option value="<?= $iva->id?>"> <?= $iva->ivas_id; ?></option>
+                        <option value="<?= $iva->id?>"> <?= $iva->percentagem; ?></option>
                     <?php } ?>
                     <br>
                     <br>
                 </select>
-                <button  <input type=submit" class="btn btn-success">Editar Servico </button>
+                <button  <input type=submit" class="btn btn-success">Guardar Servico </button>
             </form>
             <a href="./index.php?c=servico&a=index">
                 <button  class="btn btn-danger">Cancelar</button>

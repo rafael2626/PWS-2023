@@ -1,6 +1,3 @@
-<?php
-?>
-
 
 <h2 class="top-space"></h2>
 <div class="row">
@@ -21,7 +18,7 @@
                 <td><?= $servico->descricao?></td>
                 <td><?= $servico->precohora?></td>
                 <td><?= $servico->iva->percentagem?></td>
-                <td> <a href="index.php?c=linhaobra&a=create?idservico<?= $servico->id ?>"> Seleccionar </a></td>
+                <td> <a href="index.php?c=linhaobra&a=store"> Seleccionar </a></td>
                 <?php } ?>
             </tr>
             <tbody>

@@ -51,7 +51,8 @@
                 <br>
                 <label for="role">Role</label>
                 <br>
-                <select name="role"  class="form-control">
+                <select name="role"  class="form-control"
+
 
                     <?php
                     foreach(['','admin','funcionario','cliente']as $opcao)

@@ -47,6 +47,7 @@ class ServicoController extends Controller
 
     public function edit($id)
     {
+        $this->authenticationFilterAllows(['admin','funcionario']);
 
         $ivas = Iva::all();
         $servico = Servico::find($id);

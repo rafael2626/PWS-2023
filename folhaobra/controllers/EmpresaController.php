@@ -3,19 +3,15 @@ require_once 'models\Empresa.php';
 require_once 'controllers\Controller.php';
 class EmpresaController extends Controller
 {
-    public function __construct()
-    {
-        $this->authenticationFilterAllows(['admin','funcionario','cliente']);
-    }
     public function index()
     {
-        $this->authenticationFilterAllows(['admin','funcionario']);
+        $this->authenticationFilterAllows(['admin']);
         $empresas = Empresa::all();
         $this->renderView('empresa', 'index', ['empresas' => $empresas]);
     }
     public function show($id)
     {
-        $this->authenticationFilterAllows(['admin','funcionario']);
+        $this->authenticationFilterAllows(['admin']);
 
         $empresa = Empresa::find($id);
         if (is_null($empresa)) {
@@ -26,13 +22,13 @@ class EmpresaController extends Controller
     }
     public function create()
     {
-        $this->authenticationFilterAllows(['admin','funcionario']);
+        $this->authenticationFilterAllows(['admin']);
 
         $this->renderView('empresa', 'create');
     }
     public function store()
     {
-        $this->authenticationFilterAllows(['admin','funcionario']);
+        $this->authenticationFilterAllows(['admin']);
 
         $empresa = new Empresa($this->getHTTPPost());
         if($empresa->is_valid()){
@@ -44,7 +40,7 @@ class EmpresaController extends Controller
     }
     public function edit($id)
     {
-        $this->authenticationFilterAllows(['admin','funcionario']);
+        $this->authenticationFilterAllows(['admin']);
 
         $empresa = Empresa::find($id);
         if (is_null($empresa)) {
@@ -55,7 +51,7 @@ class EmpresaController extends Controller
     }
     public function update($id)
     {
-        $this->authenticationFilterAllows(['admin','funcionario']);
+        $this->authenticationFilterAllows(['admin']);
 
         $empresa = Empresa::find($id);
         $empresa->update_attributes($this->getHTTPPost());
@@ -66,16 +62,10 @@ class EmpresaController extends Controller
             $this->renderView('empresa', 'edit', ['empresa' => $empresa]);
         }
     }
-
-
-
-
-
-
-
+    
     public function delete($id)
     {
-        $this->authenticationFilterAllows(['admin','funcionario']);
+        $this->authenticationFilterAllows(['admin']);
 
         $empresa = Empresa::find($id);
         $empresa->delete();

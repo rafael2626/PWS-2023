@@ -25,9 +25,7 @@ class Empresa extends Model
         /*duvida se e 1 milhao*/
         array('localidade', 'maximum' => 50),
 
-        array('capital', 'maximum' => 3),
+        array('capital', 'maximum' => 7),
     );
-    static $validates_format_of = array(
-        array('email', 'with' => '/^[^0-9][A-z0-9_]+([.][A-z0-9_]+)*[@][A-z0-9_]+([.][A-z0-9_]+)*[.][A-z]{2,4}$/')
-    );
+
 }

@@ -13,13 +13,10 @@
                 <br>
                 <?php if(isset($empresa->errors)){ echo $empresa->errors->on('designacao'); }?>
                 <br>
-                <label for="capital">Capital Social</label>
-                <input type="text" name="capital" value="<?php if(isset($empresa)) { echo $empresa->capital; }?>">
-                <br>
-                <?php if(isset($empresa->errors)){ echo $empresa->errors->on('capital'); }?>
-                <br>
                 <label for="email">Email</label>
                 <input type="text" name="email" value="<?php if(isset($empresa)) { echo $empresa->email; }?>">
+                <br>
+                <?php if(isset($empresa->errors)){ echo $empresa->errors->on('email'); }?>
                 <br>
                 <label for="telefone">Telefone</label>
                 <input type="text" name="telefone" value="<?php if(isset($empresa)) { echo $empresa->telefone; }?>">
@@ -45,6 +42,11 @@
                 <input type="text" name="localidade" value="<?php if(isset($empresa)) { echo $empresa->localidade; }?>">
                 <br>
                 <?php if(isset($empresa->errors)){ echo $empresa->errors->on('localidade'); }?>
+                <br>
+                <label for="capital">Capital Social</label>
+                <input type="text" name="capital" value="<?php if(isset($empresa)) { echo $empresa->capital; }?>">
+                <br>
+                <?php if(isset($empresa->errors)){ echo $empresa->errors->on('capital'); }?>
                 <br>
                 <button  <input type=submit" class="btn btn-success">Guardar Empresa</button>
             </form>

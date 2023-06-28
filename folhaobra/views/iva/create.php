@@ -28,7 +28,7 @@
                     ?>
                 </select>
 
-                <?php if(isset($iva->errors)){ echo $iva->errors->on('vigor'); }?>
+                <?php if(isset($xiva->errors)){ echo $iva->errors->on('vigor'); }?>
                 <br>
                 <button  <input type=submit" class="btn btn-success">Registar IVA </button>
             </form>

@@ -165,17 +165,7 @@
                         <a href="index.php?c=folhaobra&a=index" class="nav-link">
                             <i class="nav-icon fas fa-copy"></i>
                             <p>
-                               Emitir FO
-                                <i class="fas fa-angle-left right"></i>
-                            </p>
-                        </a>
-                    </li>
-
-                    <li class="nav-item">
-                        <a href="index.php?c=folhaobra&a=index" class="nav-link">
-                            <i class="nav-icon fas fa-copy"></i>
-                            <p>
-                          FO Emitidas
+                      Gestão de Folhas de Obras
                                 <i class="fas fa-angle-left right"></i>
                             </p>
                         </a>
@@ -194,7 +184,7 @@
                     <a href="index.php?c=user&a=index" class="nav-link">
                         <i class="nav-icon fas fa-copy"></i>
                         <p>
-                            Registar Funcionários
+                            Gestão de Funcionários e Clientes
                             <i class="fas fa-angle-left right"></i>
                         </p>
                     </a>

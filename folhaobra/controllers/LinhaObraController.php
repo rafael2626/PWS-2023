@@ -1,14 +1,12 @@
 <?php
 require_once 'models\LinhaObra.php';
-require_once 'models\Empresa.php';
-require_once 'models\Servico.php';
-require_once 'models\Folhaobra.php';
 require_once 'controllers\Controller.php';
 
 class LinhaObraController extends Controller
 {
-    public function index(/*$idfolhaobra*/)
+    public function index()
     {
+        $this->authenticationFilterAllows(['cliente']);
         $empresas = Empresa::all();
         $this->renderView('linhaobra', 'index', ['empresas' => $empresas]);
     }
@@ -35,9 +33,9 @@ class LinhaObraController extends Controller
         $folhasobra->subtotal = $linhaobra->valortotal + $folhasobra->valoriva;
         if ($linhaobra->is_valid()) {
             $linhaobra->save();
+            $this->redirectToRoute('linhaobra', 'create',['linhaobra' => $linhaobra]);
         }
     }
-
     public function select()
     {
         $servicos = Servico::all();

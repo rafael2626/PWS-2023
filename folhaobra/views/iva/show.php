@@ -12,9 +12,8 @@
             else
             {
                 ?>
-                <h1>Book</h1>
+                <h1>IVA</h1>
                 ID do IVA: <?= $ivas->id ?><br>
-                Valor do IVA: <?= $ivas->valor ?><br>
                 Percentagem: <?= $ivas->percentagem?><br>
                 Descricao: <?= $ivas->descricao?><br>
                 Vigor : <?= $ivas->vigor?><br>

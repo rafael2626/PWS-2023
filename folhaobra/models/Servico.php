@@ -8,9 +8,7 @@ class Servico extends  Model
         array('precohora', 'message' => 'O preco tem que ser preenchido'),
         array('referencia', 'message' => 'A referencia tem que ser preenchida'),
     );
-    static $validates_inclusion_of = array(
-        array('vigor', 'in' => array ('0', '1'))
-    );
+
     static $belongs_to = array(
     array('iva')
 );

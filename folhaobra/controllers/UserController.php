@@ -6,7 +6,7 @@ class UserController extends Controller
 {
     public function index()
     {
-        $this->authenticationFilterAllows(['admin']);
+        $this->authenticationFilterAllows(['admin','funcionario']);
 
         $users = User::all();
         $this->renderView('user', 'index', ['users' => $users]);
@@ -14,7 +14,7 @@ class UserController extends Controller
 
     public function show($id)
     {
-        $this->authenticationFilterAllows(['admin']);
+        $this->authenticationFilterAllows(['admin','funcionario']);
 
         $user = User::find($id);
         if (is_null($user)) {
@@ -26,14 +26,14 @@ class UserController extends Controller
 
     public function create()
     {
-        $this->authenticationFilterAllows(['admin']);
+        $this->authenticationFilterAllows(['admin','funcionario']);
 
         $this->renderView('user', 'create');
     }
 
     public function store()
     {
-        $this->authenticationFilterAllows(['admin']);
+        $this->authenticationFilterAllows(['admin','funcionario']);
 
         $user = new User($this->getHTTPPost());
         if ($user->is_valid()) {
@@ -46,7 +46,7 @@ class UserController extends Controller
 
     public function edit($id)
     {
-        $this->authenticationFilterAllows(['admin']);
+        $this->authenticationFilterAllows(['admin','funcionario']);
 
         $user = User::find($id);
         if (is_null($user)) {
@@ -59,7 +59,7 @@ class UserController extends Controller
     public function update($id)
     {
 
-        $this->authenticationFilterAllows(['admin']);
+        $this->authenticationFilterAllows(['admin','funcionario']);
 
         $user = User::find($id);
         $user->update_attributes($this->getHTTPPost());
@@ -73,7 +73,7 @@ class UserController extends Controller
 
     public function delete($id)
     {
-        $this->authenticationFilterAllows(['admin']);
+        $this->authenticationFilterAllows(['admin','funcionario']);
 
         $user = User::find($id);
         $user->delete();
